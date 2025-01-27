@@ -1,0 +1,2 @@
+mov eax, [ebx + ecx*4 + 0x10] ; This line accesses memory outside the allocated bounds if ecx is too large. 
+mov [edi + 0x20], eax ; This line writes to an invalid memory location if edi is not properly initialized or points outside allocated memory. 
